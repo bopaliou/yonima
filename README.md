@@ -1,116 +1,50 @@
-# 🛵 YONIMA : L'Infrastructure Logistique Intelligente pour le Sénégal
+# Welcome to your Expo app 👋
 
-**YONIMA** n'est pas une simple application de livraison ; c'est une infrastructure numérique conçue pour résoudre le chaos logistique urbain de **Dakar** et **Thiès**.
-En s'inspirant de l'excellence opérationnelle de **Yango**, le projet vise à éliminer les inefficacités du dernier kilomètre par une automatisation radicale basée sur la donnée spatiale.
+This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
-> **Thèse :** La technologie doit rendre la logistique invisible.
+## Get started
 
----
+1. Install dependencies
 
-## 🏗 Architecture Système
+   ```bash
+   npm install
+   ```
 
-Le système est articulé autour d'une architecture hybride robuste privilégiant la performance en temps réel et la précision géo-spatiale.
+2. Start the app
 
-- **📱 Interface Mobile "Edge-First" (React Native)**
-  Une expérience multiplateforme conçue pour la réactivité, même en conditions de réseau dégradées (Zones blanches).
-  
-- **🧠 Orchestrateur Backend Modulaire (NestJS)**
-  Un moteur agissant comme cerveau central pour la logique métier, la sécurité et la médiation des données.
+   ```bash
+   npx expo start
+   ```
 
-- **🌍 Moteur Spatial Temps Réel (PostgreSQL + PostGIS)**
-  Une base de données augmentée transformant les coordonnées GPS en décisions automatisées.
+In the output, you'll find options to open the app in a
 
----
+- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
+- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
+- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
+- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
 
-## ⚡ Fonctionnalités du Moteur Central
+You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
 
-### 1. Logique de Géofencing "Zéro-Clic" 🛰️
-Gestion automatisée du cycle de vie d'une course, sans interaction manuelle.
+## Get a fresh project
 
-- **Déclencheurs de Proximité :** Périmètres de 100m pour automatiser les changements d'état.
-- **Collecte Automatisée :** Détection instantanée de l'arrivée au point A (Ramassage).
-- **Transit Intelligent :** Passage automatique au statut "En transit" dès la sortie de zone.
-- **Conscience de la Destination :** Alerte client automatique à l'approche du point B.
-
-### 2. Tarification Dynamique Anticipée (Upfront) 💎
-Transparence totale du prix avant confirmation de la commande.
-
-- **Calcul Hybride :** Forfait de base + Variable kilométrique (basée sur l'itinéraire optimal).
-- **Contextualisation :** Ajustement tarifaire selon l'urgence et la typologie du colis.
-
-### 3. Règlement Financier Intégré 💸
-- **Commission Automatisée :** Prélèvement de 20% par course pour la plateforme.
-- **Paiements Hybrides :** Support natif du Cash, Wave et Orange Money.
-- **Portefeuille Digital :** Réconciliation en temps réel des soldes partenaires.
-
----
-
-## 🛡 Protocole de Confiance & Sécurité
-
-### 1. Intégration des Partenaires Professionnels (Onboarding)
-- **Vérification Documentaire :** Upload et analyse de la CNI, du Permis de conduire et de l'Assurance.
-- **Activation Manuelle :** Audit strict et validation par l'administration YONIMA.
-
-### 2. Remise Sécurisée (OTP)
-- **Code de Validation :** Sécurisation du transfert de responsabilité via un code unique entre le Partenaire et le Client final.
-
----
-
-## 📱 Logique de l'Application Partenaire
-
-### 1. Philosophie UX : "Une Main, Sans Regard" 🖐️
-Conçue pour la sécurité et la vitesse sous le soleil sénégalais.
-- **Contraste Élevé :** Palette Bleu Marine & Orange pour une lisibilité maximale en extérieur.
-- **Mode Conducteur :** Zones de touche larges (60x60px+) pour les actions critiques.
-- **Retour Sensoriel :** Vibrations haptiques et signaux sonores pour opérer sans quitter la route des yeux.
-
-### 2. Le Moteur : Opérations en Arrière-plan Persistantes ⚙️
-- **Suivi Huate Performance :** Service de localisation en arrière-plan survivant à la minimisation de l'app.
-- **Optimisation Batterie :** Polling adaptatif (Fréquence élevée en mouvement, basse à l'arrêt).
-- **Réseau Résilient :** File d'attente hors-ligne (Offline Queue) stockant les changements d'état en zone blanche et synchronisant dès reconnexion.
-
-### 3. Flux de Mission Automatisé (Zéro-Contact) 🤖
-**Le Radar Intelligent (Overlay) :**
-- Alerte prioritaire instantanée pour les nouvelles courses.
-- Compte à rebours visuel pour l'acceptation.
-
-**Machine à États de Proximité :**
-1.  **Phase A (Approche) :** Itinéraire vers le Point de Collecte.
-2.  **Phase B (Zone A < 100m) :** Bascule auto vers les Détails du Colis.
-3.  **Phase C (Transit) :** Bascule auto vers l'Itinéraire de Livraison à la sortie de zone.
-4.  **Phase D (Zone B < 100m) :** Affichage auto de la saisie OTP.
-
-### 4. Transparence & Fintech 💰
-- **Gains en Direct :** Tableau de bord temps réel avec visualisation de la répartition 80/20.
-- **Réconciliation :** Suivi distinct des encaissements Cash vs Digital (Wave/Orange Money).
-
----
-
-## 💻 Stack Technique
-
-- **Frontend :** React Native (Expo), **Mapbox**, TanStack Query.
-- **Backend :** NestJS, Prisma.
-- **Base de Données/Auth :** Supabase (PostgreSQL / PostGIS).
-- **Cartographie :** Mapbox Vector Tiles.
-
----
-
-## 🚀 Démarrage (Getting Started)
-
-### Prérequis
-- Node.js & npm/yarn
-- Expo CLI
-- Projet Supabase configuré
-
-### Installation
+When you're ready, run:
 
 ```bash
-# Cloner le dépôt
-git clone [url-du-depot]
-
-# Installer les dépendances
-npm install
-
-# Lancer le serveur de développement
-npx expo start
+npm run reset-project
 ```
+
+This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+
+## Learn more
+
+To learn more about developing your project with Expo, look at the following resources:
+
+- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
+- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+
+## Join the community
+
+Join our community of developers creating universal apps.
+
+- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
+- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
